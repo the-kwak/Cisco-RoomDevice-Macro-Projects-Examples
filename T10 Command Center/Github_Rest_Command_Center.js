@@ -150,6 +150,7 @@ xapi.event.on('UserInterface Extensions Widget Action', (event) => {
           case 'x003':
             command = '001';
             console.log('Command Selected = '+command);
+           /**
             xapi.command('UserInterface Message TextInput Display', {
                      Title: 'Join Zoom Meeting',
                      Text: 'Enter the Meeting ID and tap Join.<p> Want your own Zoom account? Go to harvard.zoom.us',
@@ -158,6 +159,12 @@ xapi.event.on('UserInterface Extensions Widget Action', (event) => {
                      InputType: 'Numeric',
                      KeyboardState: 'Open',
                      SubmitText: 'Update'
+                     });
+            */
+             xapi.command('UserInterface Message Alert Display', {
+                     Title: 'Zoom dialer is disabled',
+                     Text: 'This Zoom dialer is a work in progress and is currently disabled',
+                     Duration: '5'
                      });
             break;
           case 'x004':
